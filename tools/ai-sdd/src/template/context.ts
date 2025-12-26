@@ -50,7 +50,7 @@ export const createTemplateContext = (
 });
 
 export const buildTemplateContext = (opts: BuildTemplateContextOptions): TemplateContext => {
-  const kiro = resolveSddDir(opts.sddDir ?? {});
+  const sdd = resolveSddDir(opts.sddDir ?? {});
   const layout = resolveAgentLayout(opts.agent, opts.config);
-  return createTemplateContext(opts.lang, kiro, layout);
+  return createTemplateContext(opts.lang, sdd, layout);
 };

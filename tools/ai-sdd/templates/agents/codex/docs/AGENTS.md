@@ -22,31 +22,31 @@ Project memory keeps persistent guidance (steering, specs notes, component docs)
 
 ### Active Specifications
 - Check `{{SDD_DIR}}/specs/` for active specifications
-- Use `/prompts:kiro-spec-status [feature-name]` to check progress
+- Use `/prompts:sdd-spec-status [feature-name]` to check progress
 
 ## Development Guidelines
 {{DEV_GUIDELINES}}
 
 ## Minimal Workflow
-- Phase 0 (optional): `/prompts:kiro-steering`, `/prompts:kiro-steering-custom`
+- Phase 0 (optional): `/prompts:sdd-steering`, `/prompts:sdd-steering-custom`
 - Phase 1 (Specification):
-  - `/prompts:kiro-spec-init "description"`
-  - `/prompts:kiro-spec-requirements {feature}`
-  - `/prompts:kiro-validate-gap {feature}` (optional: for existing codebase)
-  - `/prompts:kiro-spec-design {feature} [-y]`
-  - `/prompts:kiro-validate-design {feature}` (optional: design review)
-  - `/prompts:kiro-spec-tasks {feature} [-y]`
-- Phase 2 (Implementation): `/prompts:kiro-spec-impl {feature} [tasks]`
-  - `/prompts:kiro-validate-impl {feature}` (optional: after implementation)
-- Progress check: `/prompts:kiro-spec-status {feature}` (use anytime)
+  - `/prompts:sdd-spec-init "description"`
+  - `/prompts:sdd-spec-requirements {feature}`
+  - `/prompts:sdd-validate-gap {feature}` (optional: for existing codebase)
+  - `/prompts:sdd-spec-design {feature} [-y]`
+  - `/prompts:sdd-validate-design {feature}` (optional: design review)
+  - `/prompts:sdd-spec-tasks {feature} [-y]`
+- Phase 2 (Implementation): `/prompts:sdd-spec-impl {feature} [tasks]`
+  - `/prompts:sdd-validate-impl {feature}` (optional: after implementation)
+- Progress check: `/prompts:sdd-spec-status {feature}` (use anytime)
 
 ## Development Rules
 - 3-phase approval workflow: Requirements → Design → Tasks → Implementation
 - Human review required each phase; use `-y` only for intentional fast-track
-- Keep steering current and verify alignment with `/prompts:kiro-spec-status`
+- Keep steering current and verify alignment with `/prompts:sdd-spec-status`
 - Follow the user's instructions precisely, and within that scope act autonomously: gather the necessary context and complete the requested work end-to-end in this run, asking questions only when essential information is missing or the instructions are critically ambiguous.
 
 ## Steering Configuration
 - Load entire `{{SDD_DIR}}/steering/` as project memory
 - Default files: `product.md`, `tech.md`, `structure.md`
-- Custom files are supported (managed via `/prompts:kiro-steering-custom`)
+- Custom files are supported (managed via `/prompts:sdd-steering-custom`)

@@ -38,7 +38,7 @@ const booleanFlags = new Set([
   'backup',
   ...agentAliasMap.keys(),
 ]);
-const valueFlags = new Set(['agent', 'lang', 'os', 'overwrite', 'kiro-dir', 'backup', 'manifest', 'profile']);
+const valueFlags = new Set(['agent', 'lang', 'os', 'overwrite', 'sdd-dir', 'kiro-dir', 'backup', 'manifest', 'profile']);
 
 const isKnownFlag = (name: string): boolean => booleanFlags.has(name) || valueFlags.has(name);
 
@@ -117,6 +117,7 @@ export const parseArgs = (argv: string[]): ParsedArgs => {
         case 'y':
           out.yes = true;
           break;
+        case 'sdd-dir':
         case 'kiro-dir':
           out.sddDir = String(value);
           break;

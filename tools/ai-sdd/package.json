@@ -1,8 +1,24 @@
 {
   "name": "ai-sdd",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Transform your coding workflow with AI-powered Spec-Driven Development. One command installs 11 powerful slash commands, Project Memory, and structured development workflows for 7 AI coding agents based on the AI-Assisted SDD methodology.",
-  "keywords": ["claude-code", "cursor", "windsurf", "gemini-cli", "codex", "github-copilot", "qwen-code", "sdd", "spec-driven-development", "ai-development", "ai-assisted", "specification", "agentic-sdlc", "subagents", "parallel-tasks"],
+  "keywords": [
+    "claude-code",
+    "cursor",
+    "windsurf",
+    "gemini-cli",
+    "codex",
+    "github-copilot",
+    "qwen-code",
+    "sdd",
+    "spec-driven-development",
+    "ai-development",
+    "ai-assisted",
+    "specification",
+    "agentic-sdlc",
+    "subagents",
+    "parallel-tasks"
+  ],
   "author": "Leonardo Sampaio",
   "license": "MIT",
   "repository": {
